@@ -1,31 +1,56 @@
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
 /* Header */
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: black;
     padding: 15px 20px;
 }
 
+.logo a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
 .nav-links {
+    list-style: none;
     display: flex;
 }
 
 .nav-links li {
-    list-style: none;
     margin-right: 20px;
+    position: relative;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
+    padding: 10px 15px;
 }
 
-/* Mega Menu */
+/* Mega Menu Fix */
+.dropdown {
+    position: relative;
+}
+
 .dropdown-menu {
     display: none;
     position: absolute;
+    top: 100%;
+    left: 0;
     background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
+    z-index: 999;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -39,6 +64,15 @@ header {
     background: url('images/banner.jpg') no-repeat center;
     background-size: cover;
     color: white;
+}
+
+/* Button */
+.btn {
+    background: orange;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 /* Footer */
