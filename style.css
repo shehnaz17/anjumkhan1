@@ -1,191 +1,144 @@
-/* Reset and Global Styles */
+/* Reset Defaults */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-}
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
-/* Navigation Styles */
+/* Header - Brand Name */
+.header {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Navigation Bar */
 .navbar {
-  background: #fff;
-  border-bottom: 1px solid #eaeaea;
-  padding: 15px 0;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
+    display: flex;
+    justify-content: center;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
 }
-.navbar .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
+.nav-menu li {
+    display: inline;
 }
-.nav-links {
-  list-style: none;
-  display: flex;
+.nav-menu a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    padding: 10px;
+    transition: color 0.3s;
 }
-.nav-links li {
-  margin-left: 20px;
-}
-.nav-links a {
-  color: #333;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s;
-}
-.nav-links a:hover {
-  color: #777;
+.nav-menu a:hover {
+    color: #c99b72;
 }
 
-/* Hero Section */
-.hero {
-  height: 100vh;
-  background: url('WEDDING_BLOG_POST-01_4f145415-0197-4ffb-965d-fee1b9e454bb.jpg')center/cover no-repeat;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  padding: 0 20px;
+/* Banner Section */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background: url('images/banner.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  z-index: 1;
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
 }
-.hero-content {
-  position: relative;
-  z-index: 2;
+.banner-text {
+    position: absolute;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 5px;
 }
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
+.banner-text h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
 }
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
+.banner-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 .cta-button {
-  background: #fff;
-  color: #333;
-  padding: 12px 30px;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-  text-decoration: none;
+    display: inline-block;
+    padding: 12px 24px;
+    background: #c99b72;
+    color: white;
+    font-size: 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s;
 }
 .cta-button:hover {
-  background: #f4f4f4;
+    background: #a77d58;
 }
 
-/* Products Section */
+/* Featured Collection */
+.featured-collection {
+    text-align: center;
+    padding: 60px 20px;
+}
+.featured-collection h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
 .products {
-  padding: 100px 0;
-  background: #f9f9f9;
-  text-align: center;
-}
-.products h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 .product-item {
-  background: #fff;
-  padding: 20px;
-  border: 1px solid #eaeaea;
-  transition: transform 0.3s;
-}
-.product-item:hover {
-  transform: translateY(-5px);
+    width: 300px;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: transform 0.3s;
 }
 .product-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 15px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
 }
 .product-item h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 .product-item p {
-  font-size: 1rem;
-  color: #777;
+    font-size: 18px;
+    color: #c99b72;
+}
+.product-item:hover {
+    transform: translateY(-5px);
 }
 
-/* About and Sustainability Sections */
-.about, .sustainability {
-  padding: 80px 0;
-  text-align: center;
-}
-.about h2, .sustainability h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-.about p, .sustainability p {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1rem;
-  color: #555;
-}
-
-/* Footer Styles */
-footer {
-  background: #333;
-  color: #fff;
-  padding: 40px 0;
-  text-align: center;
-}
-footer p {
-  margin-bottom: 10px;
-}
-.social-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-.social-links li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-.social-links li a:hover {
-  color: #aaa;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-  .nav-links {
-    display: none; /* For simplicity; you could implement a mobile menu */
-  }
+/* Footer */
+.footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
 }
