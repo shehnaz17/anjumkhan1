@@ -1,24 +1,29 @@
-/* Reset Default Styles */
+/* ====== RESET DEFAULTS ====== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* Header */
+/* ====== HEADER MENU ====== */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: black;
     padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .logo a {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .nav-links {
@@ -27,58 +32,58 @@ header {
 }
 
 .nav-links li {
-    margin-right: 20px;
     position: relative;
+    margin-right: 20px;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     padding: 10px 15px;
+    font-size: 1.2rem;
 }
 
-/* Mega Menu Fix */
-.dropdown {
-    position: relative;
-}
-
+/* Mega Menu */
 .dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     background: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
-    z-index: 999;
 }
 
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Banner */
-.banner {
-    text-align: center;
-    padding: 100px 0;
-    background: url('images/banner.jpg') no-repeat center;
+/* ====== HERO BANNER ====== */
+.hero {
+    height: 85vh;
+    background: url('images/hero.jpg') no-repeat center;
     background-size: cover;
-    color: white;
-}
-
-/* Button */
-.btn {
-    background: orange;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-/* Footer */
-footer {
-    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     color: white;
     padding: 20px;
-    text-align: center;
 }
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #ff4081;
+    padding: 12px 25px;
+    color: white;
+    font-size:
